@@ -112,9 +112,9 @@ class SpotDataConfig:
         "annotation.human.action.task_description",
     ]
     
-    # 관찰 및 액션 인덱스 (실제 데이터에 맞게 수정)
-    observation_indices = [0, 1, 2, 3, 4, 5, 6]  # 7개 상태 키 (시간적 오프셋)
-    action_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]  # 16개 시간 스텝
+    # 관찰 및 액션 인덱스
+    observation_indices = list(range(-6, 1))  # [-6, -5, -4, -3, -2, -1, 0] (7개)
+    action_indices = list(range(-15, 1))      # [-15, -14, ..., -1, 0] (16개)
     
     # 정규화 모드 설정
     state_normalization_modes = {
